@@ -4,22 +4,15 @@
     flex-direction: column;
     width:100%;
     font-family: $main-font;
-    position: relative;
-    &:before{
-        position: absolute;
-        width:100vw;
-        height: 100%;
-        top:0;
-        content: "";
-        background-image: url('./images/contact-bg.png');
-        background-repeat: no-repeat;
-        background-size:  100% 100%;
-        z-index: -9999;
+    background-image: url('./images/contact-bg.png');
+    background-repeat: no-repeat;
+    background-size:  100% 100%;
+    
 
-        @media only screen and (max-width: 700px){
-            background-size: cover;    
-        }
+    @media only screen and (max-width: 700px){
+        background-size: cover;    
     }
+    
    
 
     .contact_title{
@@ -144,11 +137,12 @@
 
         &:before{
             position: absolute;
-            width:102.5vw;
+            width:100%;
             height: 100%;
             top:0;
-            left:-20%;
+            left:0%;
             content: "";
+            
             background-color: $copyright-background-color;
             z-index: -9999;
         }
