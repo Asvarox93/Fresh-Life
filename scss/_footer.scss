@@ -1,0 +1,165 @@
+#footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    font-family: $main-font;
+    position: relative;
+    &:before{
+        position: absolute;
+        width:100vw;
+        height: 100%;
+        top:0;
+        content: "";
+        background-image: url('./images/contact-bg.png');
+        background-repeat: no-repeat;
+        background-size:  100% 100%;
+        z-index: -9999;
+
+        @media only screen and (max-width: 700px){
+            background-size: cover;    
+        }
+    }
+   
+
+    .contact_title{
+        margin-top: 5rem;
+        font-size:5em;
+        font-weight: bold;
+    }
+
+    .contact_describle{
+        margin: 2rem 0;
+        font-size: 1.2em;
+        width: 25%;
+        text-align: center;
+
+        @media only screen and (max-width: 1240px){
+            width: 35%;
+        }
+
+        @media only screen and (max-width: 750px){
+            width: 60%;
+        }
+
+        
+    }
+
+    .contact_form_section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width:60%;
+        margin:3rem 0 5rem 0;
+
+        @media only screen and (max-width: 865px){
+            width:80%;
+        }
+
+        @media only screen and (max-width: 600px){
+            width:100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contact_form{
+            display: flex;
+            flex-direction: column; 
+            width:45%;
+
+            @media only screen and (max-width: 600px){
+                width:80%;
+            }
+            
+            input{
+                width:100%;
+                margin-bottom: 1rem;
+                padding: 0.5rem 0 0.5rem 0.5rem;
+                background: $contact-input-bg;
+                border:none;
+                outline: none;
+
+                &::placeholder{
+                    color:darken($contact-input-color, 10%);
+                }
+
+                &:focus{
+                    color:$contact-input-color;
+                    border-left:3px solid darken($contact-input-bg,50%);
+                }
+            }
+
+            textarea{
+                width:100%;
+                height:20vh;
+                padding: 0.5rem 0 0.5rem 0.5rem;
+                background: $contact-input-bg;
+                border:none;
+                outline:none;
+
+                &::placeholder{
+                    color:darken($contact-input-color, 10%);
+                }
+
+                &:focus{
+                    color:$contact-input-color;
+                    border-left:3px solid darken($contact-input-bg,50%);
+                }
+            }
+        }
+
+        .contact_address{
+            width: 40%;
+            line-height: 150%;
+
+            @media only screen and (max-width: 600px){
+                margin-top:2rem;
+                width:80%;
+                text-align: center;
+            }
+        }
+    }
+  
+
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width:100%;
+        height:4rem;
+        font-size:1em;
+        position: relative;
+        background-color:$copyright-background-color;
+        color: $copyright-font-color;
+
+        @media only screen and (max-width: 600px){
+           flex-direction: column;
+           justify-content: space-between;
+           padding:1rem 0;
+           height: 100%;
+           p{
+               margin: 1rem 0;
+           }
+        }
+
+        &:before{
+            position: absolute;
+            width:102.5vw;
+            height: 100%;
+            top:0;
+            left:-20%;
+            content: "";
+            background-color: $copyright-background-color;
+            z-index: -9999;
+        }
+      
+       img{
+           filter: brightness(500%);
+           height:3vh;
+       }
+
+       span{
+           color:#e22a51;
+       }
+    }
+}

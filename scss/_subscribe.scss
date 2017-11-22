@@ -1,0 +1,137 @@
+#subscribe{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10% 2rem 12%;
+    height:20rem;
+    width:78%;
+    font-family: $main-font;
+    background: url('./images/subscribe-background.png') no-repeat;
+    background-size:cover;
+    //background-position-x: 70%;
+    background-position-y: 50%;
+
+    @media only screen and (max-width: 1240px){
+        background-size: contain;
+        background-position-x: 70%;
+    }
+    @media only screen and (max-width: 787px){
+        background-size: contain;
+        background-position-x: 10px;
+        background-position-y: 50%;
+        width:90%;
+     //   height:35rem;
+        justify-content: center;
+        margin-left:10%;
+    }
+    @media only screen and (max-width: 589px){
+        background:none;
+        height:20rem;
+        align-items: center;
+        width:90%;
+        margin: 0;
+        margin-left:6%;
+    }
+
+    .subscribe__title{
+        font-size: 3em;
+        font-weight: bold;
+
+        @media only screen and (max-width: 470px){
+            font-size: 2.5em;
+        }
+        @media only screen and (max-width: 338px){
+            font-size: 2.0em;
+        }
+        @media only screen and (max-width: 272px){
+            font-size: 1.6em;
+        }
+    }
+
+    .subscribe__describe{
+        margin-top:1rem;
+        font-size: 1.2em;
+        text-align: justify;
+        width:50%;
+        @media only screen and (max-width: 470px){
+            font-size: 1em;
+            margin-top:2rem;
+        }
+        @media only screen and (max-width: 589px){
+            width:100%;
+        }
+        
+    }
+    .subscribe__form{
+        margin-top:1rem;
+        width: 70%;
+        @media only screen and (max-width: 650px){
+            width: 90%;
+        }
+        @media only screen and (max-width: 589px){
+            width: 100%;
+           // margin:1rem 0 1rem 10%;
+        }
+        @media only screen and (max-width: 470px){
+            margin-top:2rem;
+        }
+       
+        
+
+        .subscribe__form-input{
+            padding:12px 0 7px 5px;
+            width:50%;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            font-size:0.8em;
+            transition: box-shadow 0.5s ease-in-out;
+            
+
+            &::placeholder {
+            padding-left:10px;
+            }
+            &:focus{
+                outline: none;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3),
+                -1px -1px 2px rgba(0, 0, 0, 0.3);
+                transition: box-shadow 0.2s ease-in-out;
+            }
+
+            @media only screen and (max-width: 589px){
+                width:60%;
+            }
+            @media only screen and (max-width: 338px){
+                width:50%;
+                &::placeholder {
+                    padding-left:2px;
+                    font-size: 0.8em;
+                }
+            }
+            @media only screen and (max-width: 272px){
+                width:50%;
+            }
+        
+        }
+        .subscribe__form-submit{
+            font-size:1.2em;
+            padding: 6px 3%;
+            margin-left: 1%;
+            font-weight: 100;
+            background-color: $subscribe-form-submit-bg;
+            color: $subscribe-form-submit-color;
+            cursor: pointer;
+            border:none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3),
+            -1px -1px 2px rgba(0, 0, 0, 0.3);
+            
+            &:hover{
+                background-color:darken($subscribe-form-submit-bg,10%);
+            }
+            
+            @media only screen and (max-width: 272px){
+               padding: 9px 1% 6px 1%;
+               font-size: 1em;
+            }
+        }
+    }
+}

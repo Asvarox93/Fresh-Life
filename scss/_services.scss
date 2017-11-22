@@ -1,0 +1,111 @@
+#services{
+    background-color: $services-background-color;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    position: relative;
+
+    @media screen and (min-width:1920px) {
+        overflow: visible;
+    }
+    &:before{
+        position: absolute;
+        width:102.5vw;
+        height: 100%;
+        top:0;
+        left:-20%;
+        content: "";
+        background-color: $services-background-color;
+        z-index: -9999;
+    }
+
+    .services-list{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom:1%;
+        .services-item{
+            width:60%;
+            margin-top:15px;
+            align-self: center;
+            background-color:$services-items-background;
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3),
+                        -2px -1px 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease-in-out;
+            &:hover{
+                background:$Nav-hover-color;
+                transform: scale(1.1);
+                transition: transform 0.2s ease-in-out;
+            }
+            
+
+            &:nth-child(3){
+                .services-btn{
+                    padding-top:5%;
+                    line-height: 20px;
+                }
+            }
+            .services-btn{
+                width:71.6%;
+                padding-top:7%;
+                font-size:1.0em;
+                color: $services-items-font-color;
+                font-family: $main-font;
+                font-weight: bold;
+                float:left;
+                text-align: center;
+    
+               
+            }
+            .services-btn_ico{
+                display: block;
+                float:right;
+                width:20%;
+                padding: 4%;
+                border-left: 1px solid #000;
+                
+                img{
+                    width:40px;
+                    
+                }
+            }
+
+            @media only screen and (max-width: 500px){
+                width:90%;
+
+                &:last-child{
+                  margin-bottom:10%;
+                }
+            }
+        }
+       
+    }
+    .services-title{
+        background: url('./images/services-bg.png') no-repeat center center; 
+        background-size: contain;
+        padding:8% 0;
+        margin:3% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1 1 auto;
+        font-size: 7em;
+        color: $second-main-color;
+        text-align: center;
+
+        @media only screen and (min-width: 500px) and (max-width: 768px){
+          padding: 10%;
+        }
+        @media only screen and (max-width: 500px){
+            font-size: 5.5em;
+            min-height: 500px;
+            max-height: 800px;
+            
+        }
+    }
+
+}

@@ -1,0 +1,40 @@
+// ===== Imports ===== //
+
+@import '../node_modules/reset-css/reset';
+@import url('https://fonts.googleapis.com/css?family=Raleway:light');
+@import url('https://fonts.googleapis.com/css?family=Raleway:600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:900');
+
+// ====== Veriables ===== //
+
+$max-container-width:1920px;
+$header-font-color: #000;
+$Nav-background-color: rgba(255,255,255,0.6);
+$Ham-Nav-background-color:rgba(000,000,000,0.8);
+$Ham-Nav-font-color:#fff;
+$header-back-background:#F8F7FB;
+$main-font: 'Raleway', sans-serif;
+$Nav-hover-color: #ff6033;
+$btn-background-color: #ff6033;
+$btn-text-color: #fff;
+$second-main-color:#fff;
+$about-background-color:#00bcbc;
+$about-text-color:#fff;
+$services-background-color:#70bfff;
+$services-items-background: #fff;
+$services-items-font-color: #000;
+$gallery-background-color: #ffe92f;
+$gallery-btn-color: #fff;
+$gallery-btn-bg-color: #5585a2;
+$subscribe-form-submit-bg: #96b92c ;
+$subscribe-form-submit-color: #fff;
+$blog-background-color:#b07cf7;
+$blog-font-color:#fff;
+$blog-btn-color:#fff;
+$blog-btn-background:#f72b3b;
+$blog-article-author-color: #797978;
+$contact-input-bg:rgba(0,188,188, 0.5);
+$contact-input-color: #fff;
+$copyright-background-color: #262626;
+$copyright-font-color:#a5a5a5;

@@ -1,0 +1,144 @@
+#gallery{
+    background-color: $gallery-background-color;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &:before{
+        position: absolute;
+        width:102.5vw;
+        height: 100%;
+        top:0;
+        left:-20%;
+        content: "";
+        background-color: $gallery-background-color;
+        z-index: -9999;
+    }
+
+
+
+    .gallery-describe{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: $main-font;
+        padding-top: 2rem;
+
+        
+
+        .gallery-describe_title{
+            font-weight: 900;
+            font-size: 3em;
+
+        }
+        .gallery-describe_paragraph{
+            margin-top:2rem;
+            width:35%;
+            font-size:1.1em;
+            text-align: center;
+
+            @media only screen and (max-width: 1300px){
+                width: 50%;
+            }
+
+            @media only screen and (max-width: 950px){
+                width: 70%;
+            }
+
+            @media only screen and (max-width: 500px){
+                width: 90%;
+            }
+        }
+    }
+
+    .gallery-album{
+        margin: 2rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        height: 100%;
+        
+        .gallery-album_img{
+            transition: all 0.5s ease-in-out;
+            &:hover{
+                transform:rotate(2deg);
+                transition: all 0.5s ease-in-out;
+                cursor: pointer;
+            }
+        }
+
+        
+        
+        @media only screen and (max-width: 500px){
+            justify-content: space-around;
+        }
+        
+     
+        .gallery-album_item1{
+            height: 76%;
+            width: 67%;
+
+            @media only screen and (max-width: 500px){
+                width: 98%;
+                height: 50%;
+            }
+         
+
+        }
+
+        .testow{
+            height:72%;
+            width:33%;
+            @media only screen and (max-width: 500px){
+                width: 98%;
+                height: 30%;
+                padding-left:1%;
+                
+            }
+        
+            
+        
+        .gallery-album_item2,.gallery-album_item3{
+            width:100%;
+            height: 51.2%;
+            margin-top:3px;
+
+                @media only screen and (max-width: 500px){
+                    width: 49%;
+                    height: 100%;
+                }
+            
+        }
+
+        }
+        .gallery-album_item4,.gallery-album_item5{
+            width:49.7%;
+            height:49.7%;
+
+            @media only screen and (max-width: 500px){
+                margin-top:1.5%;
+                width: 98%;
+                height:50%;
+                
+            }
+        }
+    }
+    .gallery__btn{
+     align-self: center;
+     padding:15px 3vw;
+     margin-bottom:4rem;
+     color: $gallery-btn-color;
+     background-color: $gallery-btn-bg-color;
+     font-family: $main-font;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     font-size:1.2em;
+     cursor: pointer;
+
+        &:hover{
+            background-color: darken($gallery-btn-bg-color,10%);
+        }
+    }
+}
